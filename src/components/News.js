@@ -38,7 +38,7 @@ export default class News extends Component {
   };
 
   handledNextClick = async () => {
-    if (Math.ceil(this.state.page + 1 > this.state.totalArticles / 20)) {
+    if (this.state.page + 1 > Math.ceil(this.state.totalArticles / 20)) {
     } else {
       let url = `https://newsapi.org/v2/everything?q=apple&from=2021-10-05&to=2021-10-05&sortBy=popularity&apiKey=f2ddb23f8d2b418caafa0492e361ce5e&page=${
         this.state.page + 1
